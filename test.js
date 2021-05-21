@@ -54,11 +54,12 @@ var hide = function () {
   let tdnFloatBtn = document.getElementById('tdn-float-btn');
   tdnFloatBtn.style.display = 'block';
 };
-
-let buttonDiv = document.createElement('div');
-buttonDiv.innerHTML = template;
-buttonDiv.setAttribute(
-  'style',
-  'position:absolute;top:5px;z-index:9999999998;width:98%;height:98%'
-);
-document.querySelector('body').appendChild(buttonDiv);
+window.onload = function () {
+  let buttonDiv = document.createElement('div');
+  buttonDiv.innerHTML = template;
+  buttonDiv.setAttribute(
+    'style',
+    'position:absolute;top:5px;z-index:9999999998;width:98%;height:98%'
+  );
+  document.querySelector('body').appendChild(buttonDiv);
+};
